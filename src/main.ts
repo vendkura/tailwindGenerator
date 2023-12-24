@@ -1,6 +1,6 @@
 import { ChatCompletionMessageParam } from "openai/resources/chat/completions.mjs";
 import {openai} from "./openai";
-import OpenAI from "openai";
+
 
 
 const form = document.querySelector('#generate-form') as HTMLFormElement;
