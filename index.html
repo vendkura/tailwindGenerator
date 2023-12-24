@@ -10,18 +10,33 @@
   <body class="h-full">
    
     <iframe id="generated-code" class="w-full h-full"></iframe>
-      <div class="absolute bottom-1 left-0 right-0 flex items-center justify-center">
-        <form
-        id="generate-form"
-        class="flex items-center max-w-md bg-gray-300 p-2 w-full gap-2 rounded shadow-md">
-        <textarea type="text" 
-        id="prompt"
-        name="prompt"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="A beautiful landing page" required>
-            </textarea>
-          <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Generate</button>
-        </form>
+    <div class="absolute bottom-1 left-0 right-0 rounded shadow-md" >
+
+      <div class="max-w-xs bg-gray-100 overflow-auto">
+        <ul class="flex flex-col text-xs max-h-[150px] overflow-auto  font-bold" id="messages"></ul>
       </div>
+    
+      <ul class="flex flex-col gap-1 text-xs max-h-[150px] overflow-auto bg-gray-100 font-bold" id="messages"></ul>
+      <fieldset class="flex items-center justify-center gap-2">  <!-- FIELDSET pour disable l'ecriture dans le formulaie lorsque xa charge -->
+      <form id="generate-form" class=" rounded shadow-md flex items-center max-w-md bg-gray-300 p-2 w-full gap-2">
+        <textarea
+          type="text"
+          id="prompt"
+          name="prompt"
+          class="bg-gray-50 border border-gray-300 disabled:bg-gray-500 disabled:cursor-not-allowed text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Entrez votre code Tailwind ici"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          class="text-white bg-blue-700 disabled:bg-gray-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5"
+        >
+          Generate
+        </button>
+      </form>
+    </fieldset>
+    </div>
+    
       
    
     <script type="module" src="/src/main.ts"></script>
